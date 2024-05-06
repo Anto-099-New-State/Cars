@@ -6,13 +6,12 @@
 trigger:
 - main
 
-pool: Lap-pool
+pool: Exam
 
 steps:
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'compile'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
